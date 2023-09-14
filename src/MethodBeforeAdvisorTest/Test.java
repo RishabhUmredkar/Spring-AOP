@@ -11,6 +11,7 @@ public class Test {
 	BeanFactory factory = new XmlBeanFactory(r);
 	
 	Actual ac = factory.getBean("proxy",Actual.class);
+    System.out.println("proxy class name: "+ac.getClass().getName());  
 
 	ac.m();
 	}
