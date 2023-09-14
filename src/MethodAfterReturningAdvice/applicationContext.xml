@@ -17,6 +17,5 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
   		<value>AfterAdv</value>
   	</list>
   </property>
-  
 </bean>
 </beans>
