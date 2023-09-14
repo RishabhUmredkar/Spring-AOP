@@ -6,15 +6,15 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans   
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
   
-<bean name = "actual" class = "Run.Actual"></bean>
+<bean name = "actual" class = "MethodBeforeAdvisorTest.Actual"></bean>
 <bean name = "beforeAdv" class = "MethodBeforeAdvisorTest.beforeAdvisor"></bean>
 
 <bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">  
-  <property name="target" ref = "obj"></property>
+  <property name="target" ref = "actual"></property>
 
-  <property name="interceptor">
+  <property name="interceptorNames">
 	  <list>
-  		<value>actual</value>
+  		<value>beforeAdv</value>
   	</list>
   </property>
   
